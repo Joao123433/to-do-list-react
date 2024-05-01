@@ -16,7 +16,7 @@ export default function Form() {
       done: 0
     }
 
-    const response = await fetch("https://to-do-list-react-d1a8c59e7.vercel.app/api/lista", {
+    const response = await fetch("/lista", {
       method: "POST",
       body: JSON.stringify(itemList),
       headers: {

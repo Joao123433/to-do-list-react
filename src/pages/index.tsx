@@ -8,10 +8,9 @@ export default function Home() {
   const { list, setList } = useContext(ListContext)
 
   useEffect(() => {
-    fetch("https://to-do-list-react-d1a8c59e7.vercel.app/api/lista")
+    fetch("/lista")
       .then((data) => data.json())
       .then((data) => setList(data))
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [list])
 
 

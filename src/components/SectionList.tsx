@@ -9,11 +9,11 @@ export default function SectionList() {
   const { list } = useContext(ListContext)
 
   async function handleCheck(id: string) {
-    const response = await fetch(`https://to-do-list-react-d1a8c59e7.vercel.app/api/${id}`);
+    const response = await fetch(`/lista/${id}`);
     const currentItem = await response.json();
     const updatedItem = { ...currentItem, done: 1 };
 
-    await fetch(`https://to-do-list-react-d1a8c59e7.vercel.app/api/${id}`, {
+    await fetch(`/lista/${id}`, {
       method: "PUT",
       body: JSON.stringify(updatedItem),
       headers: {
@@ -23,7 +23,7 @@ export default function SectionList() {
   }
 
   async function handleDelete(id: string) {
-    await fetch(`https://to-do-list-react-d1a8c59e7.vercel.app/api/${id}`, {
+    await fetch(`/lista/${id}`, {
       method: "DELETE"
     });
   }
