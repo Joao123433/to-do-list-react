@@ -1,8 +1,13 @@
 {
+  "version": 2,
   "routes": [
-    { "src": "/api/(.*)", "dest": "$1" }
-  ],
-  "rewrites": [
-    { "source": "/lista/(.*)", "destination": "/$1" }
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    },
+    {
+      "src": "/lista/(.*)",
+      "dest": "/$1"
+    }
   ]
 }
