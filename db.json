@@ -25,18 +25,7 @@
       "done": 0
     }
   ],
-  "prioridade": [
-    {
-      "id": "1",
-      "text": "Urgente"
-    },
-    {
-      "id": "2",
-      "text": "Mediano"
-    },
-    {
-      "id": "3",
-      "text": "Não Urgente"
-    }
-  ]
+  "routes": {
+    "/lista": "/lista"
+  }
 }
